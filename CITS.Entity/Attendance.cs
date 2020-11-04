@@ -11,8 +11,8 @@ namespace CITS.Entity
         #region variables
         int employeeID;
         DateTime date;
-        DateTime intime;
-        DateTime outtime;
+        string intime;
+        string outtime;
         string notes;
         #endregion
 
@@ -21,9 +21,10 @@ namespace CITS.Entity
         #region properties
         public int EmployeeID { get => EmployeeID; set => EmployeeID = value; }
         public DateTime Date { get => Date; set => Date = value; }
-        public DateTime Intime { get => intime; set => intime = value; }
-        public DateTime Outtime { get => outtime; set => outtime = value; }
+        
         public string Notes { get => notes; set => notes = value; }
+        public string Intime { get => intime; set => intime = value; }
+        public string Outtime { get => outtime; set => outtime = value; }
 
         #endregion
 
@@ -34,12 +35,12 @@ namespace CITS.Entity
         }
 
 
-        public Attendance(int empID, DateTime dt, DateTime intm, DateTime outtm, string nts)
+        public Attendance(int empID, DateTime dt, string intm, string outtm, string nts)
         {
             employeeID = empID;
             Date = dt;
-            intime = intm;
-            outtime = outtm;
+            Intime = intm;
+            Outtime = outtm;
             notes = nts;
 
         }
